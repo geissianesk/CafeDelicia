@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Café Delícia</title>
+    <style>
+        header, footer {
+            background-color: #5d4037;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f1e1;
+            color: #333;
+        }
+        main {
+            padding: 30px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .produto {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff3e0;
+        }
+        .cardapio {
+            background-color: #ffe0b2;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .contato {
+            background-color: #d7ccc8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .dark {
+            background-color: #3e2723;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .redes img {
+            width: 30px;
+            margin: 0 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            margin: 5px 0 15px 0;
+            padding: 8px;
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            outline: none;
+            border-radius: 5px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            border-radius: 10px;
+            outline: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Café Delícia</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção Sobre -->
+        <section id="sobre">
+            <h2>Sobre o Café</h2>
+            <p>Bem-vindo ao Café Delícia! Um lugar aconchegante para você relaxar, trabalhar ou encontrar amigos.</p>
+            <p>Nossos cafés são preparados com grãos especiais, trazendo qualidade e sabor incomparáveis.</p>
+            <p>Aberto desde 2005, sempre servindo você com carinho.</p>
+            <div class="dark">
+                <p>Venha experimentar nossos sabores especiais!</p>
+            </div>
+        </section>
+
+        <!-- Seção Cardápio -->
+        <div class="cardapio" id="cardapio">
+            <h2>Nosso Cardápio</h2>
+            <div class="produto">
+                <img src="https://comumaxicaradecafe.com.br/wp-content/uploads/2021/01/01-1.jpg" alt="Café Especial" width="150">
+                <p><strong>Café Especial</strong> - Um café intenso e aromático.</p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                </tr>
+                <tr>
+                    <td>Café Expresso</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Cappuccino</td>
+                    <td>R$ 8,00</td>
+                </tr>
+                <tr>
+                    <td>Bolo de Chocolate</td>
+                    <td>R$ 7,00</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Seção Contato -->
+        <div class="contato" id="contato">
+            <h2>Fale Conosco</h2>
+            <form onsubmit="enviarMensagem(); return false;">
+                Nome:<br>
+                <input type="text" required><br>
+                E-mail:<br>
+                <input type="email" required><br>
+                Como nos conheceu?<br>
+                <input type="checkbox" name="origem" value="Internet"> Internet
+                <input type="checkbox" name="origem" value="Amigos"> Amigos
+                <input type="checkbox" name="origem" value="Passei em frente"> Passei em frente<br>
+                Qual seu café favorito?<br>
+                <input type="radio" name="cafe" value="Expresso"> Expresso
+                <input type="radio" name="cafe" value="Cappuccino"> Cappuccino
+                <input type="radio" name="cafe" value="Latte"> Latte<br><br>
+                Avalie nosso ambiente:<br>
+                <input type="range" min="0" max="10"><br><br>
+                Comentários:<br>
+                <textarea rows="4"></textarea><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        <h3>Escute o som ambiente do nosso café:</h3>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+
+        <h3>Vídeo Institucional:</h3>
+        <video width="320" height="240" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Café Delícia - Todos os direitos reservados.</p>
+        <div class="redes">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="30" height="30">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="30" height="30">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function enviarMensagem() {
+            alert('Obrigado por entrar em contato com o Café Delícia!');
+        }
+    </script>
+</body>
+</html>
